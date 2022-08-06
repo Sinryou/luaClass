@@ -56,15 +56,15 @@ print(cat1:getClassName()) --> Animal.Cat
 
 ```
 
-use enum.lua can oganize table in a enum-like way.
+Use enum.lua can oganize table in a enum-like way.
 
 ### Enum-like table
 ```lua
 local enum = require "enum"
 
 local ShapeColor = enum({"red","blue","green"})
-print(ShapeColor.green)
-print(ShapeColor.getName[ShapeColor.green])
+print(ShapeColor.green) --> 3
+print(ShapeColor.getName[ShapeColor.green]) --> green
 ```
 
 

@@ -56,7 +56,7 @@ print(cat1:getClassName()) --> Animal.Cat
 
 ```
 
-To use enum.lua can oganize table in a enum-like way.
+Using enum.lua can oganize table in a enum-like way.
 
 ### Enum-like table
 ```lua

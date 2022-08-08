@@ -16,11 +16,11 @@ Except the usage from rxi's classic.lua, Object.lua overrided the __tostring fun
 
 ### Print classes and objects
 ```lua
-    local Dog = require "Animal.Dog"
-    print(Dog) --> Class: Animal.Dog
+local Dog = require "Animal.Dog"
+print(Dog) --> Class: Animal.Dog
 
-    local dog = Dog("haski",3,"black")
-    print(dog) --> Animal.Dog{ ["name"] = haski,["color"] = black,["age"] = 3,} 
+local dog = Dog("haski",3,"black")
+print(dog) --> Animal.Dog{ ["name"] = haski,["color"] = black,["age"] = 3,} 
 ```
 
 Object.lua allows objects to clone themselvs to avoid lua's shallow copy problem.

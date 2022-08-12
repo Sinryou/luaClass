@@ -12,9 +12,16 @@ local function main()
     print(a1)
     a1:mathing()
 
+    local a2 = a1:clone()
+    print(a2~=a1)
+
     local b = Dog("haski",3,"black")
     print(b)
     b:eat()
+
+    for k, v in pairs(package.loaded) do
+    	print(k, v)
+    end
 end
 
 main()

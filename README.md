@@ -64,7 +64,7 @@ local enum = require "enum"
 
 local ShapeColor = enum({"red","blue","green"})
 print(ShapeColor.green) --> 3
-print(ShapeColor.getName[ShapeColor.green]) --> green
+print(ShapeColor.getName(ShapeColor.green)) --> green
 ```
 
 

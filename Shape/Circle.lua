@@ -12,7 +12,7 @@ end
 
 -- Override
 function Circle:draw()
-    local info = string.format("drawing a circle at (%d %d %d %d) in %s",self.bounds.x,self.bounds.y,self.bounds.width,self.bounds.heght,ShapeColor.getName[self.fillColor])
+    local info = string.format("drawing a circle at (%d %d %d %d) in %s",self.bounds.x,self.bounds.y,self.bounds.width,self.bounds.heght,ShapeColor.getName(self.fillColor))
     print(info)
 end
 

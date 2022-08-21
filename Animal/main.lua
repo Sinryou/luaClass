@@ -19,9 +19,9 @@ local function main()
     print(b)
     b:eat()
 
-    for k, v in pairs(package.loaded) do
-    	print(k, v)
-    end
+    -- for k, v in pairs(package.loaded) do
+    -- 	print(k, v)
+    -- end
 end
 
 main()

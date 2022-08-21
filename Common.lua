@@ -103,5 +103,5 @@ function SendTerminal(cmd)
         rsp:close()
         return result:match([[^stdout:(.*)stderr:.*%s$]]), result:match([[^stdout:.*stderr:(.*)%s$]])
     end
-    return ""
+    return "", ""
 end

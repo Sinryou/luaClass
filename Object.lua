@@ -67,7 +67,8 @@ function Object:clone()
     assert(not isClass(self),"Function [clone] must call by an Object!")
     local function copy(org, res)
         for k,v in pairs(org) do
-            if type(v) ~= "table" then
+            -- 对该对象内的对象只进行浅拷贝
+            if type(v) ~= "table" or v.__type == "Class" then
                 res[k] = v;
             else
                 res[k] = {};

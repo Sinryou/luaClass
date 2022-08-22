@@ -72,10 +72,16 @@ end
 function LinkedList:printList()
     local nd = Node()
     nd = self.head
+    local size = self.size
     pcall(
         function ()
             local str = ""
             while nd.next ~= self.head do
+                if nd.next == nd then
+                    str = str..nd.data.."->"..nd.data.."(self)-x[unreachable]"..self.head.data.."(head)"
+                    print(str)
+                    error()
+                end
                 str = str..nd.data.."->"
                 nd = nd.next
             end
@@ -85,5 +91,9 @@ function LinkedList:printList()
         )
 end
 
-return LinkedList
+-- 避免递归死循环
+function LinkedList:__tostring()
+    return "LinkedList"
+end
 
+return LinkedList

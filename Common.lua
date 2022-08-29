@@ -95,7 +95,7 @@ end
 
 function SendTerminal(cmd)
     local currentPath = debug.getinfo(1).source:match([[@(.+)[\/].-%.lua]])
-    local pyCmd = [["python %s/execCmd.py %s]]
+    local pyCmd = [[python %s/execCmd.py %s]]
     cmd = pyCmd:format(currentPath, cmd)
     local rsp = io.popen(cmd)
     if rsp then

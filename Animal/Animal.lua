@@ -1,6 +1,6 @@
-local Object = require "Object"
+local Object <const> = require "Object"
 
-local Animal = Object:extend()
+local Animal = Object:extend("Animal.Animal")
 
 function Animal:new(name, age)
     self.name = name

@@ -1,6 +1,6 @@
-local Object = require "Object"
+local Object <const> = require "Object"
 
-local Engine = Object:extend()
+local Engine = Object:extend("CarParts.Engine")
 
 -- Override
 function Engine:__tostring()

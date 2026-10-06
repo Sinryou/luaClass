@@ -1,3 +1,3 @@
-local enum = require "enum"
+local enum <const> = require "enum"
 
-return enum({"red","blue","green"})
+return enum("ShapeColor", {"red", "blue", "green"})

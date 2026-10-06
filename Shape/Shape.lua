@@ -1,14 +1,15 @@
-local Object = require "Object"
+local Object <const> = require "Object"
 
-local Shape = Object:extend()
+local Shape = Object:extend("Shape.Shape")
 
-function Shape:new(fillColor,bounds)
+function Shape:new(fillColor, bounds)
     self.fillColor = fillColor
-    self.bounds = {}
-    self.bounds.x = bounds[1]
-    self.bounds.y = bounds[2]
-    self.bounds.width = bounds[3]
-    self.bounds.heght = bounds[4]
+    local b <const> = table.create(0, 5)
+    b.x = bounds[1]
+    b.y = bounds[2]
+    b.width = bounds[3]
+    b.height = bounds[4]
+    self.bounds = b
 end
 
 function Shape:draw()

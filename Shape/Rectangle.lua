@@ -1,11 +1,13 @@
-local Shape = require "Shape.Shape"
-local ShapeColor = require "Shape.ShapeColor"
+local Shape <const> = require "Shape.Shape"
+local ShapeColor <const> = require "Shape.ShapeColor"
 
-local Rectangle = Shape:extend()
+local Rectangle = Shape:extend("Shape.Rectangle")
 
 -- Override
 function Rectangle:draw()
-    local info = string.format("drawing a rectangle at (%d %d %d %d) in %s",self.bounds.x,self.bounds.y,self.bounds.width,self.bounds.heght,ShapeColor.getName(self.fillColor))
+    local b <const> = self.bounds
+    local info <const> = string.format("drawing a rectangle at (%d %d %d %d) in %s",
+        b.x, b.y, b.width, b.height, ShapeColor.getName(self.fillColor))
     print(info)
 end
 

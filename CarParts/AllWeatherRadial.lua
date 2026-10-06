@@ -1,6 +1,6 @@
-local Tire = require "CarParts.Tire"
+local Tire <const> = require "CarParts.Tire"
 
-local AllWeatherRadial = Tire:extend()
+local AllWeatherRadial = Tire:extend("CarParts.AllWeatherRadial")
 
 -- Override
 function AllWeatherRadial:__tostring()

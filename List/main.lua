@@ -1,9 +1,9 @@
-local LinkedList = require "List.LinkedList"
-local Node = require "List.Node"
+local LinkedList <const> = require "List.LinkedList"
+local Node <const> = require "List.Node"
 
 local function main()
-    local lst = LinkedList()
-    local head = Node(11,nil)
+    local lst <const> = LinkedList()
+    local head <const> = Node(11, nil)
     lst:addHead(head)
     lst:addTail(Node(22))
     lst:addTail(Node(33))
@@ -12,7 +12,7 @@ local function main()
     print()
 
     print("在此处拷贝下：")
-    local lst2 = lst:clone()
+    local lst2 <const> = lst:clone()
     print(" 打印拷贝链表：")
     lst2:printList()
 
